@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.version     = version
   spec.files = Dir['bin/**/*']
   spec.bindir = 'bin'
-  spec.executables << 'paket.bootstrapper'
+  spec.executables << 'paket.bootstrapper' << 'paket'
   spec.license = 'MIT'
 
   spec.summary     = 'Bootstrapper for paket'
