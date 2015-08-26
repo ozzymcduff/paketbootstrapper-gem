@@ -1,3 +1,4 @@
+#! ruby
 windows = Gem.win_platform? 
 to_exec = [File.dirname(__FILE__) + "/paket.bootstrapper.exe", ARGV.join(' ')]
 to_exec.insert(0, "mono --runtime=v4.0") if ! windows
