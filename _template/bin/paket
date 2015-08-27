@@ -1,6 +1,8 @@
 #! ruby
 windows = Gem.win_platform? 
-to_exec = [File.dirname(__FILE__) + "/paket.exe", ARGV.join(' ')]
+file = File.dirname(__FILE__) + "/paket.exe"
+to_exec = [file, ARGV.join(' ')]
+system("paket.bootstrapper") if ! File.exists? file 
 to_exec.insert(0, "mono --runtime=v4.0") if ! windows
 result = system(to_exec.join(' '))
 exit 1 unless result
